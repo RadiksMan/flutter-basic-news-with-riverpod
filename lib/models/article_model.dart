@@ -39,26 +39,6 @@ class Article {
     data['content'] = content;
     return data;
   }
-
-  Article copyWith({
-    String? author,
-    String? title,
-    String? description,
-    String? publishedAt,
-    String? content,
-    String? url,
-    String? urlToImage,
-  }) {
-    return Article(
-      author: author ?? this.author,
-      title: title ?? this.title,
-      description: description ?? this.description,
-      publishedAt: publishedAt ?? this.publishedAt,
-      content: content ?? this.content,
-      url: url ?? this.url,
-      urlToImage: urlToImage ?? this.urlToImage,
-    );
-  }
 }
 
 class ArticleState {
