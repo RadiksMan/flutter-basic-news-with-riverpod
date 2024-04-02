@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_basic_news_with_riverpod/models/article_model.dart';
 import 'package:flutter_basic_news_with_riverpod/services/article_service.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

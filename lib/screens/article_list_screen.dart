@@ -126,6 +126,7 @@ class _ArticleListState extends ConsumerState<ArticleList> {
 
   Widget _buildListTile(Article article) {
     final description = (article.description ?? '').split(' ').take(5).join(' ');
+
     final formatedDate = () {
       if (article.publishedAt != null) {
         final date = DateTime.parse(article.publishedAt!);
@@ -135,14 +136,15 @@ class _ArticleListState extends ConsumerState<ArticleList> {
     }();
 
     return ListTile(
-        onTap: () => _onArticleTap(article),
-        visualDensity: const VisualDensity(vertical: 1),
-        title: Text(
-          article.title,
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-        ),
-        subtitle: Text('$description...'),
-        trailing: Text(formatedDate));
+      onTap: () => _onArticleTap(article),
+      visualDensity: const VisualDensity(vertical: 1),
+      title: Text(
+        article.title,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+      ),
+      subtitle: Text('$description...'),
+      trailing: Text(formatedDate),
+    );
   }
 }

@@ -34,7 +34,7 @@ class ArticleNotifier extends StateNotifier<ArticleState> {
         state = state.copyWith(isLoading: false, isLoadMoreDone: true);
       }
     } on DioException catch (e) {
-      // get message from dio
+      // get error message from dio
       final message = e.response?.data['message'] ?? e.message;
       state = state.copyWith(isLoading: false, errorMessage: message);
     } catch (e) {
